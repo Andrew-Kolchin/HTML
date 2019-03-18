@@ -1,0 +1,42 @@
+@for $i from 12 to 80 {
+  .fontSize_#{$i} {
+    font-size: #{$i}px;
+  }
+}
+
+@mixin robotoRegular($color) {
+  color: $color;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+@mixin robotoMedium($color) {
+  color: $color;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+@mixin robotoBold($color) {
+  color: $color;
+  font-family: 'Roboto';
+  font-weight: 700;
+}
+
+@mixin robotoBlack($color) {
+  color: $color;
+  font-family: 'Roboto';
+  font-weight: 900;
+}
+
+@mixin robotoLight($color) {
+  color: $color;
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
+@mixin robotoThin($color) {
+  color: $color;
+  font-family: 'Roboto';
+  font-weight: 100;
+}
+
