@@ -459,6 +459,32 @@
       .subscribeCard__elements .btn {
         width: 100%; } }
 
+/*PROMO POINTS*/
+.promo-points-wrapper {
+  background-image: url("../imgs/comment-ca-marche3434.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
+
+.promoPoints {
+  max-width: 772px;
+  padding: 5% 0; }
+  .promoPoints__title {
+    color: #2789e3;
+    font-family: 'Roboto';
+    font-weight: 700; }
+  .promoPoints__content {
+    color: #fff;
+    font-family: 'Roboto';
+    font-weight: 400; }
+    .promoPoints__content-bold {
+      color: #fff;
+      font-family: 'Roboto';
+      font-weight: 700; }
+  .promoPoints__list {
+    color: #fff;
+    font-family: 'Roboto';
+    font-weight: 400; }
+
 /*PROMO*/
 .promo-wrapper {
   background-image: url("../imgs/banner.png");
@@ -610,6 +636,9 @@
       @media (max-width: 991px) {
         .news .post__infoWrapper {
           display: block; } }
+      @media (max-width: 768px) {
+        .news .post__infoWrapper {
+          margin-bottom: 20px; } }
     .news .post__date {
       color: #fff;
       font-family: 'Roboto';
