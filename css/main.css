@@ -258,6 +258,8 @@
   background-image: url("../imgs/Home_page.png");
   background-repeat: no-repeat;
   background-size: 100% 100%; }
+  .header-wrapper-comment {
+    background-image: url("../imgs/bgComment.png"); }
 
 .header {
   display: flex;
@@ -424,6 +426,9 @@
   @media (max-width: 992px) {
     .subscribeCard {
       display: block; } }
+  .subscribeCard__img {
+    max-height: 410px;
+    margin: 15px 0; }
   .subscribeCard__text {
     color: #666c72;
     font-family: 'Roboto';
@@ -464,10 +469,14 @@
   background-image: url("../imgs/comment-ca-marche3434.png");
   background-repeat: no-repeat;
   background-size: 100% 100%; }
+  .promo-points-wrapper-noBg {
+    background: #ebeced; }
 
 .promoPoints {
   max-width: 772px;
   padding: 5% 0; }
+  .promoPoints-fullWidth {
+    max-width: 100%; }
   .promoPoints__title {
     color: #2789e3;
     font-family: 'Roboto';
@@ -476,6 +485,8 @@
     color: #fff;
     font-family: 'Roboto';
     font-weight: 400; }
+    .promoPoints__content-grey {
+      color: #666c72; }
     .promoPoints__content-bold {
       color: #fff;
       font-family: 'Roboto';
@@ -483,7 +494,30 @@
   .promoPoints__list {
     color: #fff;
     font-family: 'Roboto';
-    font-weight: 400; }
+    font-weight: 400;
+    list-style-type: none; }
+    .promoPoints__list li {
+      position: relative; }
+      .promoPoints__list li span {
+        width: 10px;
+        height: 10px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        left: -15px;
+        top: 7px;
+        background-color: #ffad1a; }
+        .promoPoints__list li span.check {
+          background-color: transparent;
+          background-image: url("../imgs/checkbox.png");
+          background-repeat: no-repeat;
+          width: 17px;
+          height: 17px;
+          border-radius: 0;
+          top: 2px;
+          left: -25px; }
+    .promoPoints__list-grey {
+      color: #666c72; }
 
 /*PROMO*/
 .promo-wrapper {

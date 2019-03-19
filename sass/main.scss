@@ -84,6 +84,10 @@
   background-image: url('../imgs/Home_page.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
+
+  &-comment{
+    background-image: url('../imgs/bgComment.png');
+  }
 }
 
 .header {
@@ -307,6 +311,11 @@
     display: block;
   }
 
+  &__img{
+    max-height: 410px;
+    margin: 15px 0;
+  }
+
   &__text {
     @include robotoRegular($greyText);
   }
@@ -355,11 +364,19 @@
   background-image: url('../imgs/comment-ca-marche3434.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
+
+  &-noBg {
+    background: $sectionModGrey;
+  }
 }
 
 .promoPoints {
   max-width: 772px;
   padding: 5% 0;
+
+  &-fullWidth {
+    max-width: 100%;
+  }
 
   &__title {
     @include robotoBold($promoTitle);
@@ -368,6 +385,10 @@
   &__content {
     @include robotoRegular($white);
 
+    &-grey {
+      color: $greyText;
+    }
+
     &-bold {
       @include robotoBold($white);
     }
@@ -375,6 +396,36 @@
 
   &__list {
     @include robotoRegular($white);
+    list-style-type: none;
+
+    li {
+      position: relative;
+      span {
+        width: 10px;
+        height: 10px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        left: -15px;
+        top: 7px;
+        background-color: $btnDanger;
+
+        &.check {
+          background-color: transparent;
+          background-image: url('../imgs/checkbox.png');
+          background-repeat: no-repeat;
+          width: 17px;
+          height: 17px;
+          border-radius: 0;
+          top: 2px;
+          left: -25px;
+        }
+      }
+    }
+
+    &-grey {
+      color: $greyText;
+    }
   }
 }
 
