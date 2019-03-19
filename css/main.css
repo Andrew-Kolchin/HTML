@@ -497,7 +497,8 @@
     font-weight: 400;
     list-style-type: none; }
     .promoPoints__list li {
-      position: relative; }
+      position: relative;
+      margin: 20px 0; }
       .promoPoints__list li span {
         width: 10px;
         height: 10px;
