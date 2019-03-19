@@ -85,8 +85,12 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
-  &-comment{
+  &-comment {
     background-image: url('../imgs/bgComment.png');
+  }
+
+  &-transport {
+    background-image: url('../imgs/transportBg.png');
   }
 }
 
@@ -298,6 +302,14 @@
   background-size: 100%;
   background-repeat: no-repeat;
 
+  &-transport {
+    background-image: url('../imgs/transportSubBg.png');
+  }
+
+  &-transport-2 {
+    background-image: url('../imgs/transportBg2.png');
+  }
+
   @media (max-width: 992px) {
     background: transparent;
   }
@@ -305,19 +317,23 @@
 
 .subscribeCard {
   display: flex;
-  padding: 10% 0;
+  padding: 5% 0;
 
   @media (max-width: 992px) {
     display: block;
   }
 
-  &__img{
+  &__img {
     max-height: 410px;
     margin: 15px 0;
   }
 
   &__text {
     @include robotoRegular($greyText);
+
+    &-white {
+      color: $white;
+    }
   }
 
   &__title {
@@ -327,6 +343,10 @@
       font-size: 30px;
     }
 
+    &-white {
+      color: $white;
+    }
+
     > span {
       @include robotoBold($subTitleBlue);
       text-transform: uppercase;
@@ -334,6 +354,10 @@
   }
 
   &__elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
     input {
       width: 312px;
       margin-bottom: 20px;
@@ -398,9 +422,14 @@
     @include robotoRegular($white);
     list-style-type: none;
 
+    &-grey {
+      color: $greyText;
+    }
+
     li {
       position: relative;
-      margin: 20px 0;
+      margin-bottom: 20px;
+
       span {
         width: 10px;
         height: 10px;
@@ -864,4 +893,124 @@ footer {
   transition: all 300ms;
   position: relative;
   z-index: 2;
+}
+
+.trover-card-wrapper {
+  background-color: $sectionModGrey;
+  padding: 5% 0;
+
+  .trover-title {
+    line-height: 1;
+    @include robotoBold($titleDeepBlue);
+
+    > span {
+      color: $subTitleBlue;
+      text-transform: uppercase;
+    }
+  }
+
+  img {
+    max-width: 530px;
+  }
+
+  .content {
+    @include robotoRegular($greyText);
+  }
+}
+
+.trover-subscribe-title {
+  @include robotoBold($white);
+  padding-top: 5%;
+}
+
+.fullpost {
+  padding: 5% 0;
+}
+
+/*STEPS*/
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5% 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  &__label {
+    margin-right: 15px;
+  }
+
+  &__step {
+    width: 50%;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__labelTitle {
+    @include robotoLight($promoColor);
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  &__labelCount {
+    @include robotoBold($promoColor);
+    line-height: 1;
+    margin-top: -15px;
+  }
+
+  &__text {
+    margin-right: 15px;
+  }
+}
+
+/*QUESTIONS*/
+.questions {
+  padding: 5% 0;
+
+  &__title {
+    @include robotoBold($questionsTitle);
+  }
+
+  &__description {
+    @include robotoBold($black);
+  }
+
+  &__accordion {
+    .card {
+      margin-bottom: 20px;
+
+      &:after {
+        position: absolute;
+        content: "\002b";
+        width: 25px;
+        height: 25px;
+        background-color: $titleDeepBlue;
+        border-radius: 50%;
+        top: 50%;
+        margin-top: -12.5px;
+        right: 10px;
+        color: $white;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .card-header {
+      background: transparent !important;
+    }
+
+    button {
+      text-decoration: none;
+      @include robotoRegular($greyText);
+    }
+  }
 }
