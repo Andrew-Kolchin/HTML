@@ -139,7 +139,7 @@
         flex-direction: column;
       }
 
-      .sub-menu{
+      .sub-menu {
         display: block;
       }
     }
@@ -512,6 +512,10 @@
     width: 30%;
     flex-direction: column;
     display: flex;
+
+    &.last {
+      padding-left: 5%;
+    }
 
     @media (max-width: 768px) {
       width: 100%;

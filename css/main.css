@@ -591,6 +591,8 @@
     width: 30%;
     flex-direction: column;
     display: flex; }
+    .promo__block.last {
+      padding-left: 5%; }
     @media (max-width: 768px) {
       .promo__block {
         width: 100%;
