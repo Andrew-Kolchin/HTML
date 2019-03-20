@@ -503,7 +503,7 @@
 .promo {
   display: flex;
   justify-content: space-between;
-  padding: 45px 20px;
+  padding: 45px 0;
   @media (max-width: 768px) {
     flex-direction: column;
   }
