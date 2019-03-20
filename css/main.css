@@ -275,7 +275,8 @@
 .header-wrapper {
   background-image: url("../imgs/Home_page.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%; }
+  background-size: cover;
+  background-position: right; }
   .header-wrapper-comment {
     background-image: url("../imgs/bgComment.png"); }
   .header-wrapper-transport {
@@ -300,11 +301,25 @@
       background-image: url("../imgs/lnColor.png"); }
   .header__logo {
     flex: 2; }
+  .header__menu .sub-menu {
+    display: none;
+    position: absolute;
+    padding-left: 0;
+    list-style-type: none; }
+  @media (max-width: 768px) {
+    .header__menu > ul {
+      display: flex;
+      flex-direction: column; }
+    .header__menu .sub-menu {
+      display: block; } }
+  .header__menu .nav-item:hover .sub-menu {
+    display: block; }
   .header__menu a {
     color: #000;
     font-family: 'Roboto';
     font-weight: 900;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    position: relative; }
     .header__menu a > span {
       position: relative; }
       .header__menu a > span:after, .header__menu a > span:before {
@@ -426,7 +441,7 @@
   .stats .donuts-wrapper {
     display: flex;
     justify-content: center; }
-    @media (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       .stats .donuts-wrapper {
         flex-direction: column;
         align-items: center; } }
@@ -434,7 +449,8 @@
 /*SUBSCRIBE CARD*/
 .subscribeCard-wrapper {
   background-image: url("../imgs/img4.png");
-  background-size: 100%;
+  background-size: cover;
+  background-position: right;
   background-repeat: no-repeat; }
   .subscribeCard-wrapper-transport {
     background-image: url("../imgs/transportSubBg.png"); }
@@ -500,7 +516,8 @@
 .promo-points-wrapper {
   background-image: url("../imgs/comment-ca-marche3434.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%; }
+  background-size: cover;
+  background-position: right; }
   .promo-points-wrapper-noBg {
     background: #ebeced; }
 
@@ -571,11 +588,18 @@
     .promo {
       flex-direction: column; } }
   .promo__block {
-    width: 30%; }
+    width: 30%;
+    flex-direction: column;
+    display: flex; }
     @media (max-width: 768px) {
       .promo__block {
         width: 100%;
         padding: 5% 0; } }
+    .promo__block div.text-center {
+      display: flex;
+      flex: 2;
+      justify-content: center;
+      align-items: flex-end; }
   .promo__subscribe {
     padding: 6px 15px !important;
     color: #fff;
@@ -773,10 +797,8 @@
 .contacts-wrapper {
   background-image: url("../imgs/footer.png");
   background-repeat: no-repeat;
-  background-size: 100%; }
-  @media (max-width: 768px) {
-    .contacts-wrapper {
-      background-size: 100% 100%; } }
+  background-size: cover;
+  background-position: right; }
   .contacts-wrapper .contacts {
     display: flex;
     align-items: center;
@@ -786,8 +808,8 @@
         padding: 10% 0; } }
     @media (max-width: 768px) {
       .contacts-wrapper .contacts {
-        flex-wrap: wrap;
-        align-items: center; } }
+        align-items: center;
+        flex-direction: column; } }
     .contacts-wrapper .contacts .contact-block {
       width: 33%; }
       @media (max-width: 768px) {
@@ -808,7 +830,8 @@
       align-items: center; }
       @media (max-width: 768px) {
         .contacts-wrapper .contacts .locations {
-          width: 45%; } }
+          width: 45%;
+          justify-content: space-around; } }
       @media (max-width: 468px) {
         .contacts-wrapper .contacts .locations {
           width: 100%; } }
@@ -828,7 +851,8 @@ footer {
     justify-content: space-between; }
     @media (max-width: 768px) {
       footer .footer-blocks {
-        flex-wrap: wrap; } }
+        flex-wrap: wrap;
+        flex-direction: column; } }
     footer .footer-blocks .footer-block {
       width: 15%;
       display: flex;
@@ -998,3 +1022,88 @@ footer {
     color: #666c72;
     font-family: 'Roboto';
     font-weight: 400; }
+
+/*SUBSCRIBE FORM*/
+.subscribeForm {
+  display: none;
+  max-width: 468px;
+  max-height: 550px;
+  width: 100%;
+  box-shadow: 0 0 10px 2px #ccc;
+  background-color: #fff; }
+  .subscribeForm__header {
+    background-color: #4f7fde;
+    padding: 5% 10%; }
+    .subscribeForm__header > p {
+      color: #fff;
+      font-family: 'Roboto';
+      font-weight: 400;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin: 0; }
+  .subscribeForm__label {
+    color: #666c72;
+    font-family: 'Roboto';
+    font-weight: 300;
+    margin: 2%; }
+  .subscribeForm select {
+    width: 100%;
+    padding-left: 40px;
+    background-color: #f2f3f4;
+    color: #000;
+    font-family: 'Roboto';
+    font-weight: 400;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  .subscribeForm__input {
+    position: relative;
+    width: 100%; }
+    .subscribeForm__input > input {
+      width: 100%;
+      padding-left: 40px;
+      background-color: #f2f3f4;
+      color: #000;
+      font-family: 'Roboto';
+      font-weight: 400;
+      border: none;
+      padding-top: 5px;
+      padding-bottom: 5px; }
+    .subscribeForm__input > i {
+      position: absolute;
+      color: #666c72;
+      top: 9px;
+      left: 20px; }
+  .subscribeForm__content {
+    padding: 0 10%; }
+    .subscribeForm__content .btn {
+      width: 100%;
+      margin-top: 15px;
+      margin-bottom: 40px; }
+    .subscribeForm__content .input-group {
+      background-color: #f2f3f4;
+      align-items: center;
+      padding: 0 10%; }
+      .subscribeForm__content .input-group.full {
+        padding: 0 5%; }
+    .subscribeForm__content .form-wrapper {
+      display: flex;
+      justify-content: space-between; }
+      .subscribeForm__content .form-wrapper .form-group {
+        width: 46%;
+        margin: 0; }
+      .subscribeForm__content .form-wrapper .form-check {
+        padding-left: 0;
+        width: 48%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: #f2f3f4;
+        display: flex;
+        align-items: center; }
+        .subscribeForm__content .form-wrapper .form-check .form-check-input {
+          margin: 0 10%;
+          width: auto; }
+        .subscribeForm__content .form-wrapper .form-check .form-check-label {
+          color: #000;
+          font-family: 'Roboto';
+          font-weight: 700; }

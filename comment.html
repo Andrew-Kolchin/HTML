@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
@@ -30,7 +31,7 @@
                         <div class="header__menu">
                             <ul class="nav fontSize_14">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="./comment.html"><span>page d’accueil</span></a>
+                                    <a class="nav-link active" href="./index.html"><span>page d’accueil</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="./transport.html"><span>Trouver un transporteur</span></a>
@@ -44,9 +45,14 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+                                    <a class="nav-link main" href="#" tabindex="-1" aria-disabled="true">
                                         <span>Proposer un transport</span>
                                     </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a class="nav-link" href="./comment.html"><span>Comment ca marche</span></a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
@@ -55,12 +61,6 @@
                 <article class="slidePost">
                     <p class="slidePost__date fontSize_16">Our 24 Hour’s Services</p>
                     <p class="slidePost__title fontSize_43">Comment Proposer Une Prestation De Transport Sup Ctr</p>
-                    <!--<p class="slidePost__description fontSize_37">Delivered on time with no hassle!</p>-->
-                    <!--<p class="slidePost__content fontSize_14">Сonsectetur adipiscing elit, sed do eiusmod tempor-->
-                    <!--incididunt utlabore etdolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation-->
-                    <!--ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit-->
-                    <!--in voluptate-->
-                    <!--</p>-->
                     <br>
                     <button class="btn btn-danger">Trouver un transporteur</button>
                 </article>
@@ -151,14 +151,17 @@
                         :
                     </p>
                     <ul class="promoPoints__list promoPoints__list-grey fontSize_14">
-                        <li><span class="check"></span>Des critères relatifs aux dates et au type de transport proposé devront être
+                        <li><span class="check"></span>Des critères relatifs aux dates et au type de transport proposé
+                            devront être
                             renseignés ;
                         </li>
-                        <li><span class="check"></span>Votre proposition pourra découler d’une proposition déjà aboutie ou même en
+                        <li><span class="check"></span>Votre proposition pourra découler d’une proposition déjà aboutie
+                            ou même en
                             cours de processus pour éviter la perte de temps ;
 
                         </li>
-                        <li><span class="check"></span>Il vous sera simple de retrouver la proposition de référence que vous souhaitez
+                        <li><span class="check"></span>Il vous sera simple de retrouver la proposition de référence que
+                            vous souhaitez
                             copier pour servir de base à votre nouvelle proposition. Vos propositions pourront
                             directement être initialisées sur la base d’une demande de transport qui vous sera suggérée
                             par la plateforme ou que vous aurez sélectionné via votre espace personnel;
@@ -185,20 +188,120 @@
         <div class="col-md-12">
             <section class="subscribeCard">
                 <img src="imgs/comment-ca-marcheSubscribe.png" class="subscribeCard__img col-md-12 col-lg-6">
-
                 <div class="subscribeCard__elements col-md-12 col-lg-6">
-                    <p class="subscribeCard__title fontSize_45">Proposez un transport de voiture
-                        <span>en quelques clics</span>
-                    <p class="subscribeCard__text">
-                        Afin de recevoir des opportunités de transport, il vous suffit de créer votre compte et de vous
-                        laisser guider par notre processus de mise en ligne des propositions.
-                        Lorsque votre proposition de transport de véhicule sera acceptée par le demandeur, vous
-                        engagerez avec lui un contrat de transport. CTP appliquera alors une commission . Toutes
-                        modifications pourra faire l’objet d’une modification du contrat mais la commission de CTP ne
-                        sera pas modifiée, le contact ayant été établi.
-                    </p>
-                    <input type="text" placeholder="Email Address">
-                    <button class="btn btn-danger">Trouver un transport</button>
+                    <div class="toggle-content">
+                        <p class="subscribeCard__title fontSize_45">Proposez un transport de voiture
+                            <span>en quelques clics</span>
+                        <p class="subscribeCard__text">
+                            Afin de recevoir des opportunités de transport, il vous suffit de créer votre compte et de
+                            vous
+                            laisser guider par notre processus de mise en ligne des propositions.
+                            Lorsque votre proposition de transport de véhicule sera acceptée par le demandeur, vous
+                            engagerez avec lui un contrat de transport. CTP appliquera alors une commission . Toutes
+                            modifications pourra faire l’objet d’une modification du contrat mais la commission de CTP
+                            ne
+                            sera pas modifiée, le contact ayant été établi.
+                        </p>
+                        <input type="text" placeholder="Email Address">
+                        <button class="btn openBlock btn-danger">Trouver un transport</button>
+                    </div>
+
+                    <div class="subscribeForm">
+                        <div class="subscribeForm__header">
+                            <p class="fontSize_21 text-center">Proposer un transport</p>
+                        </div>
+
+                        <div class="subscribeForm__content">
+
+                            <div class="form-wrapper">
+                                <div class="form-group">
+                                    <p class="subscribeForm__label fontSize_15 text-center">Available from</p>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                        <select class="form-control">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="subscribeForm__label fontSize_15 text-center">Available when</p>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                        <select class="form-control">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="subscribeForm__label fontSize_15 text-center">How many vehicle can you
+                                transport</p>
+
+                            <div class="form-group">
+                                <div class="input-group full">
+                                    <div class="input-group-prepend">
+                                        <i class="fas fa-car"></i>
+                                    </div>
+                                    <select class="form-control">
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <p class="subscribeForm__label fontSize_15 text-center">Type of track</p>
+
+                            <div class="form-wrapper">
+                                <div class="form-check">
+                                    <input class="form-check-input position-static" type="radio" id="Open"
+                                           name="TypeTrack"
+                                           value="yes">
+                                    <label class="form-check-label" for="Open">Open</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input position-static" type="radio" id="Close"
+                                           name="TypeTrack"
+                                           value="no">
+                                    <label class="form-check-label" for="Close">Close</label>
+                                </div>
+                            </div>
+
+                            <p class="subscribeForm__label fontSize_15 text-center">Cable / No cable</p>
+
+                            <div class="form-wrapper mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input position-static" type="radio" id="Cable" name="Cable"
+                                           value="yes">
+                                    <label class="form-check-label" for="Cable">Cable</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input position-static" type="radio" id="NoCable"
+                                           name="Cable"
+                                           value="no">
+                                    <label class="form-check-label" for="NoCable">No cable</label>
+                                </div>
+                            </div>
+
+                            <div class="subscribeForm__input">
+                                <input type="text" placeholder="Email address">
+                            </div>
+
+                            <div class="text-center">
+                                <button class="btn btn-danger">
+                                    Calculer un tarif en direct
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -255,6 +358,8 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="js/scripts.js"></script>
 </footer>
 </body>
 </html>

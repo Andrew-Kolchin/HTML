@@ -83,7 +83,8 @@
 .header-wrapper {
   background-image: url('../imgs/Home_page.png');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: right;
 
   &-comment {
     background-image: url('../imgs/bgComment.png');
@@ -125,9 +126,34 @@
   }
 
   &__menu {
+    .sub-menu {
+      display: none;
+      position: absolute;
+      padding-left: 0;
+      list-style-type: none;
+    }
+
+    @media (max-width: 768px) {
+      > ul {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .sub-menu{
+        display: block;
+      }
+    }
+
+    .nav-item:hover {
+      .sub-menu {
+        display: block;
+      }
+    }
+
     a {
       @include robotoBlack($black);
       text-transform: uppercase;
+      position: relative;
 
       > span {
         position: relative;
@@ -143,6 +169,7 @@
       }
 
       &:hover {
+
         > span {
           &:before {
             width: 50%;
@@ -288,7 +315,7 @@
     display: flex;
     justify-content: center;
 
-    @media (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       flex-direction: column;
       align-items: center;
     }
@@ -299,7 +326,8 @@
 
 .subscribeCard-wrapper {
   background-image: url('../imgs/img4.png');
-  background-size: 100%;
+  background-size: cover;
+  background-position: right;
   background-repeat: no-repeat;
 
   &-transport {
@@ -387,7 +415,8 @@
 .promo-points-wrapper {
   background-image: url('../imgs/comment-ca-marche3434.png');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: right;
 
   &-noBg {
     background: $sectionModGrey;
@@ -464,6 +493,7 @@
   background-image: url('../imgs/banner.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  //background-position: right;
 
   @media (max-width: 768px) {
     background: linear-gradient(to bottom, #0c4473, #245d8c);
@@ -480,10 +510,19 @@
 
   &__block {
     width: 30%;
+    flex-direction: column;
+    display: flex;
 
     @media (max-width: 768px) {
       width: 100%;
       padding: 5% 0;
+    }
+
+    div.text-center {
+      display: flex;
+      flex: 2;
+      justify-content: center;
+      align-items: flex-end;
     }
   }
 
@@ -724,11 +763,8 @@
 .contacts-wrapper {
   background-image: url('../imgs/footer.png');
   background-repeat: no-repeat;
-  background-size: 100%;
-
-  @media (max-width: 768px) {
-    background-size: 100% 100%;
-  }
+  background-size: cover;
+  background-position: right;
 
   .contacts {
     display: flex;
@@ -740,8 +776,8 @@
     }
 
     @media (max-width: 768px) {
-      flex-wrap: wrap;
       align-items: center;
+      flex-direction: column;
     }
 
     .contact-block {
@@ -767,6 +803,7 @@
       align-items: center;
       @media (max-width: 768px) {
         width: 45%;
+        justify-content: space-around;
       }
 
       @media (max-width: 468px) {
@@ -798,6 +835,7 @@ footer {
 
     @media (max-width: 768px) {
       flex-wrap: wrap;
+      flex-direction: column;
     }
 
     .footer-block {
@@ -1011,6 +1049,115 @@ footer {
     button {
       text-decoration: none;
       @include robotoRegular($greyText);
+    }
+  }
+}
+
+/*SUBSCRIBE FORM*/
+
+.subscribeForm {
+  display: none;
+  max-width: 468px;
+  max-height: 550px;
+  width: 100%;
+  box-shadow: 0 0 10px 2px #ccc;
+  background-color: $white;
+
+  &__header {
+    background-color: $subscribeCardHeader;
+    padding: 5% 10%;
+
+    > p {
+      @include robotoRegular($white);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin: 0;
+    }
+  }
+
+  &__label {
+    @include robotoLight($greyText);
+    margin: 2%;
+  }
+
+  select {
+    width: 100%;
+    padding-left: 40px;
+    background-color: $subscribeInputBG;
+    @include robotoRegular($black);
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &__input {
+    position: relative;
+    width: 100%;
+
+    > input {
+      width: 100%;
+      padding-left: 40px;
+      background-color: $subscribeInputBG;
+      @include robotoRegular($black);
+      border: none;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    > i {
+      position: absolute;
+      color: $greyText;
+      top: 9px;
+      left: 20px;
+    }
+  }
+
+  &__content {
+    padding: 0 10%;
+
+    .btn {
+      width: 100%;
+      margin-top: 15px;
+      margin-bottom: 40px;
+    }
+
+    .input-group {
+      background-color: $subscribeInputBG;
+      align-items: center;
+      padding: 0 10%;
+
+      &.full {
+        padding: 0 5%;
+      }
+    }
+
+    .form-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      .form-group {
+        width: 46%;
+        margin: 0;
+      }
+
+      .form-check {
+        padding-left: 0;
+        width: 48%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: $subscribeInputBG;
+        display: flex;
+        align-items: center;
+
+        .form-check-input {
+          margin: 0 10%;
+          width: auto;
+        }
+
+        .form-check-label {
+          @include robotoBold($black);
+        }
+      }
     }
   }
 }
