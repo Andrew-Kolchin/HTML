@@ -374,11 +374,15 @@
     line-height: 1; }
     @media (max-width: 768px) {
       .slidePost__description {
-        font-size: 30px; } }
+        font-size: 30px;
+        color: #000; } }
   .slidePost__content {
     color: #fff;
     font-family: 'Roboto';
     font-weight: 400; }
+    @media (max-width: 768px) {
+      .slidePost__content {
+        color: #000; } }
 
 /*SEARCH*/
 .inner-addon {

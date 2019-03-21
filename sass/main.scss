@@ -229,11 +229,15 @@
     line-height: 1;
     @media (max-width: 768px) {
       font-size: 30px;
+      color: $black;
     }
   }
 
   &__content {
     @include robotoRegular($white);
+    @media (max-width: 768px) {
+      color: $black;
+    }
   }
 }
 
