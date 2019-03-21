@@ -7,7 +7,9 @@ var openBlock = document.getElementsByClassName('openBlock');
 if(displayFormButton){
   displayFormButton.addEventListener('click', function (event) {
     event.target.style.opacity = 0;
+    event.target.style.zIndex = 1;
     subscribeArea.style.opacity = 1;
+    subscribeArea.style.zIndex= 2;
   });
 }
 
