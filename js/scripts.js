@@ -4,12 +4,12 @@ var displayFormButton = document.getElementById('displayForm');
 var subscribeArea = document.getElementsByClassName('promo__subscribeArea')[0];
 var openBlock = document.getElementsByClassName('openBlock');
 
-if(displayFormButton){
+if (displayFormButton) {
   displayFormButton.addEventListener('click', function (event) {
     event.target.style.opacity = 0;
     event.target.style.zIndex = 1;
     subscribeArea.style.opacity = 1;
-    subscribeArea.style.zIndex= 2;
+    subscribeArea.style.zIndex = 2;
   });
 }
 
